@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajo Final - JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav>
+    <ul>
+      <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+      <li><a href="#tareas" class="nav-link">Lista de Tareas</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección Calculadora (visible al inicio) -->
+  <section id="calculadora">
+    <h2>Calculadora Básica</h2>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <br>
+    <button onclick="operar('+')">+</button>
+    <button onclick="operar('-')">-</button>
+    <button onclick="operar('*')">*</button>
+    <button onclick="operar('/')">/</button>
+    <p>Resultado: <span id="resultado">0</span></p>
+  </section>
+
+  <!-- Sección Lista de Tareas (oculta al inicio) -->
+  <section id="tareas" class="oculto">
+    <h2>Lista de Tareas</h2>
+    <input type="text" id="nuevaTarea" placeholder="Escribe una tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+    <ul id="listaTareas"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
