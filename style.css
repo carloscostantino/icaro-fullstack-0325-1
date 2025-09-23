@@ -64,8 +64,30 @@
   color: rgb(233, 233, 233);
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer; /* para que aparezca la manito al hacer hover*/
 }
 
 .modal-img .close:hover {
   color: #6f6f6f;
 }
+
+
+/* Botones de navegación con JS lightbox los botones están con posición absoluta centrados */
+.modal-img .prev,
+.modal-img .next {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer; /* para que aparezca la manito al hacer hover*/
+  user-select: none;
+  padding: 10px;
+  transform: translateY(-50%);
+}
+.modal-img .prev:hover,
+.modal-img .next:hover {
+  color: #6f6f6f;
+}
+
+.modal-img .prev { left: 20px; }
+.modal-img .next { right: 20px; }
