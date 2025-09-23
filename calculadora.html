@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora de Equipo - Parapente</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center p-4">
+      <h1>Parapente</h1>
+      <p>Explorando el cielo con libertad</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre el Parapente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="calculadora.html">Calculadora</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido -->
+    <section class="container my-5 seccion-destacada">
+      <!-- sección con fondo suave -->
+      <h2 class="titulo-seccion">Armá tu equipo</h2>
+      <p>
+        Podés seleccionar diferentes componentes para armar tu equipo de
+        parapente. A medida que elijas, el total se actualizará automáticamente.
+      </p>
+      <form id="equipoForm" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Vela</label>
+          <select class="form-select" name="vela">
+            <option value="0">-- Seleccionar --</option>
+            <option value="2500">Categoría A - $2500</option>
+            <option value="3000">Categoría B - $3000</option>
+            <option value="3500">Categoría C - $3500</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Arnés</label>
+          <select class="form-select" name="arnes">
+            <option value="0">-- Seleccionar --</option>
+            <option value="800">Abierto - $800</option>
+            <option value="1200">Reversible - $1200</option>
+            <option value="2000">Carenado - $2000</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Paracaídas de emergencia</label>
+          <select class="form-select" name="paracaidas">
+            <option value="0">-- Seleccionar --</option>
+            <option value="700">Modelo Standard - $700</option>
+            <option value="1200">Modelo Ligero - $1200</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Handy</label>
+          <select class="form-select" name="handy">
+            <option value="0">-- Seleccionar --</option>
+            <option value="300">Frecuencia fija - $300</option>
+            <option value="600">Yaesu 250 - $600</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Casco</label>
+          <select class="form-select" name="casco">
+            <option value="0">-- Seleccionar --</option>
+            <option value="200">Modelo abierto - $200</option>
+            <option value="400">Modelo cerrado - $400</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Indumentaria</label>
+          <select class="form-select" name="indumentaria">
+            <option value="0">-- Seleccionar --</option>
+            <option value="250">Botas - $250</option>
+            <option value="100">Pantalón - $100</option>
+            <option value="50">Remera - $50</option>
+            <option value="200">Campera - $200</option>
+            <option value="500">Conjunto completo - $500</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Instrumentos</label>
+          <select class="form-select" name="instrumentos">
+            <option value="0">-- Seleccionar --</option>
+            <option value="500">Variómetro - $500</option>
+            <option value="900">GPS - $900</option>
+            <option value="1300">Pack Completo - $1300</option>
+          </select>
+        </div>
+      </form>
+
+      <!-- Resultado -->
+      <div class="mt-4 p-3 bg-light border rounded">
+        <h4>Total: <span id="total" class="text-success fw-bold">$0</span></h4><!-- total en verde y negrita -->
+        <p>Precio expresado en dólares.</p>
+        <h5 class="mt-3">Detalle:</h5>
+        <ul id="detalle"></ul><!-- lista de detalle que toma js para listar los componentes del equipo -->
+      </div>
+    </section>
+
+    <!-- Pie -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+      © 2025 Parapente. Todos los derechos reservados.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
